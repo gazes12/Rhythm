@@ -1,0 +1,188 @@
+@charset "UTF-8";
+.popup-uploadImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 100, 40, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.popup-uploadImage.active {
+  visibility: visible;
+  opacity: 1;
+}
+.popup-uploadImage__background {
+  width: 1200px;
+  height: 600px;
+  background: #fff;
+  padding: 15px;
+  -webkit-box-shadow: 6px 7px 13px 2px rgba(0, 0, 0, 0.6);
+          box-shadow: 6px 7px 13px 2px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+}
+.popup-uploadImage__close {
+  font-size: 40px;
+  text-align: right;
+  cursor: pointer;
+  padding-right: 5px;
+  color: red;
+}
+.popup-uploadImage__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 110px;
+}
+.popup-uploadImage__title {
+  font-size: 44px;
+  text-align: center;
+}
+.popup-uploadImage__input {
+  display: none;
+}
+.popup-uploadImage__label {
+  cursor: pointer;
+  position: relative;
+  margin-top: 30px;
+  text-align: center;
+  padding-left: 50px;
+  width: 120px;
+  height: 40px;
+  background: #FF6428;
+  display: block;
+  border-radius: 7px;
+  -webkit-transition: background 0.3s ease-out;
+  transition: background 0.3s ease-out;
+}
+.popup-uploadImage__label::before {
+  content: attr(data-value);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.popup-uploadImage__label:hover {
+  background: #AC441B;
+}
+.popup-uploadImage__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.popup-uploadImage__button.off {
+  cursor: not-allowed;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+.popup-uploadImage__button.on {
+  cursor: pointer;
+}
+.popup-uploadImage__button--delete {
+  margin-top: 15px;
+  color: #FF6428;
+  font-size: 20px;
+  font-weight: 700;
+}
+.popup-uploadImage__button--delete.off {
+  opacity: 0;
+  visibility: hidden;
+}
+.popup-uploadImage__button--delete.on {
+  opacity: 1;
+  visibility: visible;
+}
+.popup-uploadImage__button--upload {
+  margin-top: 20px;
+  background: #53D07D;
+  color: #fff;
+  padding: 10px 35px;
+  border-radius: 7px;
+  font-size: 30px;
+  position: relative;
+}
+.popup-uploadImage__button--upload.off {
+  opacity: 0.5;
+}
+.popup-uploadImage__button--upload.off::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  border-radius: 7px;
+  -webkit-transition: width 0.3s linear;
+  transition: width 0.3s linear;
+}
+.popup-uploadImage__button--upload.off::before {
+  content: "Загрузить";
+  position: relative;
+  z-index: 1000;
+}
+.popup-uploadImage__button--upload.off:hover::after {
+  width: 100%;
+}
+.popup-uploadImage__button--upload.on {
+  opacity: 1;
+}
+.popup-uploadImage__button--upload.on::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #FF6428;
+  border-radius: 7px;
+  -webkit-transition: width 0.3s linear;
+  transition: width 0.3s linear;
+}
+.popup-uploadImage__button--upload.on::before {
+  content: "Загрузить";
+  position: relative;
+  z-index: 1000;
+}
+.popup-uploadImage__button--upload.on:hover::after {
+  width: 100%;
+}

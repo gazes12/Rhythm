@@ -1,0 +1,157 @@
+.quality__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.quality__main {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 120px 0px 80px 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+.quality__title {
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1.2;
+  max-width: 469px;
+  font-family: "cal-sanc";
+  color: #121212;
+}
+.quality__title span {
+  color: #FF6428;
+}
+.quality__description {
+  max-width: 398px;
+}
+.quality__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 27px;
+  margin-top: 33px;
+}
+.quality__button--all {
+  margin-right: 13px;
+  position: relative;
+  background: #FF6428;
+  border-radius: 40px;
+  padding: 18px 45px;
+}
+.quality__button--all::before {
+  content: "";
+  color: #fff;
+  background: #000;
+  border-radius: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  -webkit-transition: width 0.3s linear;
+  transition: width 0.3s linear;
+}
+.quality__button--all::after {
+  content: "Get the app";
+  position: relative;
+  color: #fff;
+}
+.quality__button--all:hover::before {
+  width: 100%;
+}
+.quality__button--playmarket, .quality__button--apple {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.quality__button--playmarket:hover, .quality__button--apple:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.quality__button--playmarket svg path, .quality__button--apple svg path {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.quality__button--playmarket svg:hover path, .quality__button--apple svg:hover path {
+  fill: #000;
+}
+.quality__image-wrap {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+.quality__images {
+  max-width: 672px;
+  position: relative;
+  padding-bottom: 97.6%;
+  margin-right: -135px;
+}
+.quality__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0 0 160px 375px;
+}
+.quality__decor {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 36.6%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+@media (max-width: 1092px) {
+  .quality__image img {
+    width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .quality__title {
+    font-size: 38px;
+    max-width: 100%;
+  }
+  .quality__image-wrap {
+    display: none;
+  }
+  .quality__main {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    padding-top: 80px;
+  }
+}
+@media (max-width: 479.98px) {
+  .quality__title {
+    font-size: 24px;
+  }
+  .quality__description {
+    font-size: 14px;
+  }
+  .quality__main {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    padding-top: 70px;
+  }
+  .quality__buttons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .quality__button--all {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    text-align: center;
+  }
+}
